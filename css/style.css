@@ -1,3 +1,7 @@
+body {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
 .custom-link {
     position: relative; /* Для корректного позиционирования псевдоэлемента */
     display: inline-flex; /* Обеспечивает корректную работу с псевдоэлементом */
@@ -70,20 +74,10 @@
     content: url('https://cdn.prod.website-files.com/66a8d582fa5812f0be1bf6f0/66aa0c79be47fd296dff5949_arrow-elbow-down-right.svg'); /* Черная иконка при ховере */
 }
 
-/* Выравнивание caption-title */
-.caption-title {
-    text-align: left;
-}
-
 /* Стили для активного пункта меню */
-.menu-item.w--current {
+.nav-item.w--current.w--current {
     color: #ffffff;
     background-color: #000000;
-}
-
-.email-wrapper {
-    display: flex; /* Сохраняем flex для выравнивания */
-    align-items: center; /* Центрируем элементы по вертикали */
 }
 
 /* Стиль для ссылки */
@@ -117,13 +111,13 @@
     color: #000000; /* Цвет текста черный при ховере */
 }
 
-.caption-title {
-    text-align: left;
-}
-
 /* Стили для активного пункта меню */
-.menu-item.w--current {
+.nav-item.w--current {
     color: #ffffff;
     background-color: #000000;
+}
+
+.scroll-disabled {
+    overflow: hidden; /* Отключает вертикальный и горизонтальный скролл */
 }
 
