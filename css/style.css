@@ -1,0 +1,129 @@
+.custom-link {
+    position: relative; /* Для корректного позиционирования псевдоэлемента */
+    display: inline-flex; /* Обеспечивает корректную работу с псевдоэлементом */
+    align-items: center; /* Выровнять элементы по вертикали */
+    color: #000; /* Цвет текста ссылки */
+    text-decoration: none; /* Убирает стандартное подчеркивание */
+    padding: 0px; /* Отступы внутри ссылки */
+    overflow: hidden; /* Скрывает части псевдоэлемента за пределами ссылки */
+    transition: color 0.3s ease; /* Плавный переход цвета текста */
+    white-space: nowrap; /* Запрещает перенос текста */
+}
+
+.custom-link::before {
+    content: ''; /* Псевдоэлемент не требует текста */
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начальная позиция слева за пределами элемента */
+    width: 100%;
+    height: 100%;
+    background-color: #4BC937; /* Цвет фона при ховере */
+    transition: left 0.3s ease; /* Плавный переход фона */
+    z-index: -1; /* Отправляет фон на задний план, под текст ссылки */
+}
+
+.custom-link:hover::before {
+    left: 0; /* Перемещение псевдоэлемента на позицию */
+}
+
+/* Общие стили для всех footer-link */
+.footer-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff; /* Белый цвет текста */
+    text-decoration: none;
+    padding: 0;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1; /* Текст выше фона */
+    white-space: nowrap;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #4BC937; /* Зеленый фон при ховере */
+    z-index: -1; /* Фон ниже текста */
+    transition: width 0.3s ease; /* Анимация изменения ширины */
+}
+
+.footer-link:hover::after {
+    width: 100%; /* Фон растягивается на всю ширину при ховере */
+}
+
+.footer-link:hover {
+    color: #000000; /* Цвет текста черный при ховере */
+}
+
+/* Дополнительный класс для ссылки с иконкой */
+.footer-link.icon-link img {
+    content: url('https://cdn.prod.website-files.com/66a8d582fa5812f0be1bf6f0/66aaa8439d326b204a7b41e3_arrow-elbow-down-right--white.svg'); /* Белая иконка по умолчанию */
+    transition: all 0.3s ease; /* Плавный переход */
+}
+
+.footer-link.icon-link:hover img {
+    content: url('https://cdn.prod.website-files.com/66a8d582fa5812f0be1bf6f0/66aa0c79be47fd296dff5949_arrow-elbow-down-right.svg'); /* Черная иконка при ховере */
+}
+
+/* Выравнивание caption-title */
+.caption-title {
+    text-align: left;
+}
+
+/* Стили для активного пункта меню */
+.menu-item.w--current {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.email-wrapper {
+    display: flex; /* Сохраняем flex для выравнивания */
+    align-items: center; /* Центрируем элементы по вертикали */
+}
+
+/* Стиль для ссылки */
+.email-wrapper .footer-link {
+    position: relative;
+    display: inline-flex; /* inline-flex для текста и иконки */
+    color: #ffffff; /* Белый цвет текста */
+    text-decoration: none;
+    padding: 0; /* Убираем отступы */
+    transition: color 0.3s ease;
+    z-index: 1; /* Текст и иконка выше фона */
+}
+
+.email-wrapper .footer-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 0;
+    height: 100%;
+    background-color: #4BC937; /* Зеленый фон при ховере */
+    z-index: -1;
+    transition: max-width 0.3s ease;
+}
+
+.email-wrapper .footer-link:hover::after {
+    max-width: 100%; /* Фон растягивается на всю ширину текста */
+}
+
+.email-wrapper .footer-link:hover {
+    color: #000000; /* Цвет текста черный при ховере */
+}
+
+.caption-title {
+    text-align: left;
+}
+
+/* Стили для активного пункта меню */
+.menu-item.w--current {
+    color: #ffffff;
+    background-color: #000000;
+}
+
