@@ -121,3 +121,27 @@ body {
     overflow: hidden; /* Отключает вертикальный и горизонтальный скролл */
 }
 
+/* ------ WORKS START ------ */
+
+.works__item:hover .overlay {
+    display: flex;
+}
+
+.works__item[visible="off"]:hover .coming-soon {
+    display: flex;
+}
+
+/* .works__item[visible="on"] {
+    cursor: pointer;
+} */
+
+.works__item[visible="off"] {
+    cursor: not-allowed;
+}
+
+.works__item[visible="off"] .works__card {
+    pointer-events: none;
+}
+
+/* ------ WORKS END ------ */
+
