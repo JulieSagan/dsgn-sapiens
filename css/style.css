@@ -1,3 +1,6 @@
+* ::selection {
+    background-color: #4BC937;
+}
 body {
     font-size: clamp(1rem, 2.5vw, 2rem);
 }
@@ -124,7 +127,7 @@ body {
 /* ------ WORKS START ------ */
 
 .works__item:hover .overlay {
-    display: flex;
+    opacity: 1;
 }
 
 .works__item[visible="off"]:hover .coming-soon {
